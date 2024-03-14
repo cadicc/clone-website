@@ -3,10 +3,16 @@
     margin: 0;
     padding: 0;
 }
+body, html {
+    min-width: 640px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 .sticky_header {
     background-color: #FFF2F3;
     color: #fff;
-    padding: 15px 0;
     text-align: center;
     width: 100%;
     position: sticky;
@@ -60,6 +66,7 @@
 }
 .button_container {
     gap: 10px;
+    text-wrap: nowrap;
 }
 .button_active {
     background-color: #96BB7C;
@@ -98,19 +105,20 @@
     padding: 15px 40px;
     min-width: 162px;
     min-height: 52px;
+    box-shadow: 0 0 0 1px #96BB7C;
     background-color: #ffffff00;
 }
 .display_initial {
     display: initial;
 }
-.upper_line::before {
+.upper_line::after {
     content: '';
     display: block;
     position: absolute;
     height: 7px;
     width: 94px;
     background-color: #E74040;
-    top: calc(100% + 93px);
+    /* top: calc(100% + 93px); */
 }
 .learning_block {
     padding-top: 92px;
@@ -118,6 +126,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 60px;
+    flex-wrap: wrap-reverse;
 }
 .learning_title {
     font-weight: 700;
@@ -232,7 +241,7 @@
 }
 .footer_container {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
@@ -254,6 +263,7 @@
     color: #737373;
 }
 .footer_content a {
+    color: #737373;
     text-decoration: none;
 }
 .footer_contact {
@@ -338,4 +348,143 @@
 }
 .gap_5 {
     gap: 5px;
+}
+.footer_item {
+    margin-bottom: 15px;
+}
+.header_hamburger {
+    cursor: pointer;
+    height: 14px;
+    width: 20px;
+    transition: .5s ease-in-out;
+    position: relative;
+    display: none;
+    margin-right: 30px;
+}
+.header_hamburger span:nth-child(1) {
+    top: 0;
+}
+.header_hamburger span {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #0E141E;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    top: 6px;
+    border-radius: 1px;
+}
+.header_hamburger span:nth-child(4) {
+    top: 12px;
+}
+.header_res {
+    padding: 15px 0;
+    width: 100%;
+}
+.header_opened {
+    background-color: #FFF2F3;
+    height: 100vh;
+    transition: height 0.3s ease;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: none;
+}
+.header_opened_items {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #737373;
+    display: flex;
+    gap: 20px;
+    flex-flow: column;
+    text-align: left;
+    margin: 0 15px;
+}
+.header_opened_items a {
+    text-decoration: none;
+    color: #737373;
+    width: fit-content;
+}
+.header_opened_buttons {
+    display: flex;
+    margin: 0 15px;
+    padding-top: 20px;
+    gap: 20px;
+}
+.sticky_header .button_hollow {
+    box-shadow: none;
+}
+
+
+
+@media only screen and (max-width: 1450px) {
+    .banner {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .header_block_button {
+        margin-right: 35px;
+    }
+    .header_container {
+        margin: 0 15px;
+        min-width: 640px;
+        width: 100%;
+    }
+    .block_team_content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .team_card {
+        width: 239px;
+    }
+    .learning_block {
+        gap: 25px;
+        
+    }
+    .footer_container {
+        margin: 0 15px;
+        gap: 50px;
+    }
+    .margin_horizontal_15 {
+        margin: 0 15px;
+    }
+    .footer_buttons {
+        margin-right: 0;
+    }
+    .card_container {
+        flex-wrap: wrap;
+        margin: 0 15px;
+    }
+    .upper_line::after {
+        top: auto;
+    }
+    .learning_content {
+        margin: 0 15px;
+    }
+    .mobile_learning_img {
+        width: 100%;
+        transform: scaleX(-1);
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .header_content {
+        gap: 20px;
+    }
+    .header_block_button {
+        display: none;
+    }
+    .header_items {
+        display: none;
+    }
+    .header_hamburger {
+        display: block;
+    }
 }

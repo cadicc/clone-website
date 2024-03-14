@@ -10,33 +10,67 @@
 <body>
     <header class="display_initial">
         <div class="sticky_header">
-            <div class="header_container">
-                <div class="header_content display_flex">
-                    <div class="header_brand">Brandname</div>
-                    <div class="header_items">
+            <div class="header_res">
+                <div class="header_container">
+                    <div class="header_content display_flex">
+                        <div class="header_brand">Brandname</div>
+                        <div class="header_items">
+                            <a href="#">Home</a>
+                            <a href="#">Product</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                    <div class="header_block_button">
+                        <button class="button_hollow header_button_hallow">Login</button>
+                        <button class="button_active header_button_active">
+                            <span>
+                                JOIN US
+                            </span>
+                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2636_3118)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.81059 0.079009 4.62895 0.219646 4.49502C0.360282 4.36109 0.551026 4.28584 0.749916 4.28584H9.43845L6.21831 1.22068C6.07749 1.08658 5.99838 0.904705 5.99838 0.715059C5.99838 0.525414 6.07749 0.343536 6.21831 0.209436C6.35912 0.0753365 6.5501 0 6.74925 0C6.94839 0 7.13937 0.0753365 7.28019 0.209436L11.7797 4.49438C11.8495 4.56072 11.9049 4.63952 11.9427 4.72629C11.9805 4.81305 12 4.90606 12 5C12 5.09394 11.9805 5.18695 11.9427 5.27371C11.9049 5.36048 11.8495 5.43928 11.7797 5.50562L7.28019 9.79056C7.13937 9.92466 6.94839 10 6.74925 10C6.5501 10 6.35912 9.92466 6.21831 9.79056C6.07749 9.65646 5.99838 9.47459 5.99838 9.28494C5.99838 9.0953 6.07749 8.91342 6.21831 8.77932L9.43845 5.71416H0.749916C0.551026 5.71416 0.360282 5.63892 0.219646 5.50499C0.079009 5.37106 0 5.18941 0 5Z" fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2636_3118">
+                                        <rect width="12" height="10" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header_hamburger" onclick="handleOpenHeader()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="header_opened">
+                    <div class="header_opened_items">
                         <a href="#">Home</a>
                         <a href="#">Product</a>
                         <a href="#">Pricing</a>
                         <a href="#">Contact</a>
                     </div>
-                </div>
-                <div class="header_block_button">
-                    <button class="button_hollow header_button_hallow">Login</button>
-                    <button class="button_active header_button_active">
-                        <span>
-                            JOIN US
-                        </span>
-                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_2636_3118)">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.81059 0.079009 4.62895 0.219646 4.49502C0.360282 4.36109 0.551026 4.28584 0.749916 4.28584H9.43845L6.21831 1.22068C6.07749 1.08658 5.99838 0.904705 5.99838 0.715059C5.99838 0.525414 6.07749 0.343536 6.21831 0.209436C6.35912 0.0753365 6.5501 0 6.74925 0C6.94839 0 7.13937 0.0753365 7.28019 0.209436L11.7797 4.49438C11.8495 4.56072 11.9049 4.63952 11.9427 4.72629C11.9805 4.81305 12 4.90606 12 5C12 5.09394 11.9805 5.18695 11.9427 5.27371C11.9049 5.36048 11.8495 5.43928 11.7797 5.50562L7.28019 9.79056C7.13937 9.92466 6.94839 10 6.74925 10C6.5501 10 6.35912 9.92466 6.21831 9.79056C6.07749 9.65646 5.99838 9.47459 5.99838 9.28494C5.99838 9.0953 6.07749 8.91342 6.21831 8.77932L9.43845 5.71416H0.749916C0.551026 5.71416 0.360282 5.63892 0.219646 5.50499C0.079009 5.37106 0 5.18941 0 5Z" fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2636_3118">
-                                    <rect width="12" height="10" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
+                    <div class="header_opened_buttons">
+                        <button class="button_active header_button_active">
+                            <span>
+                                JOIN US
+                            </span>
+                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2636_3118)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.81059 0.079009 4.62895 0.219646 4.49502C0.360282 4.36109 0.551026 4.28584 0.749916 4.28584H9.43845L6.21831 1.22068C6.07749 1.08658 5.99838 0.904705 5.99838 0.715059C5.99838 0.525414 6.07749 0.343536 6.21831 0.209436C6.35912 0.0753365 6.5501 0 6.74925 0C6.94839 0 7.13937 0.0753365 7.28019 0.209436L11.7797 4.49438C11.8495 4.56072 11.9049 4.63952 11.9427 4.72629C11.9805 4.81305 12 4.90606 12 5C12 5.09394 11.9805 5.18695 11.9427 5.27371C11.9049 5.36048 11.8495 5.43928 11.7797 5.50562L7.28019 9.79056C7.13937 9.92466 6.94839 10 6.74925 10C6.5501 10 6.35912 9.92466 6.21831 9.79056C6.07749 9.65646 5.99838 9.47459 5.99838 9.28494C5.99838 9.0953 6.07749 8.91342 6.21831 8.77932L9.43845 5.71416H0.749916C0.551026 5.71416 0.360282 5.63892 0.219646 5.50499C0.079009 5.37106 0 5.18941 0 5Z" fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2636_3118">
+                                        <rect width="12" height="10" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button class="button_hollow header_button_hallow">Login</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +97,7 @@
         <section>
             <div class="container">
                 <div class="sub_container display_flex learning_block">
-                    <div>
+                    <div class="mobile_learning_img">
                         <img src="public/img-learning.png" alt="image">
                     </div>
                     <div class="learning_content">
@@ -282,7 +316,7 @@
         </section>
         <section>
             <div class="sub_container footer_container">
-                <div>
+                <div class="footer_item">
                     <h5 class="footer_title">Company info</h5>
                     <div class="footer_content">
                         <a href="#">About Us</a>
@@ -291,7 +325,7 @@
                         <a href="#">Blog</a>
                     </div>
                 </div>
-                <div>
+                <div class="footer_item">
                     <h5 class="footer_title">Legal</h5>
                     <div class="footer_content">
                         <a href="#">About Us</a>
@@ -300,7 +334,7 @@
                         <a href="#">Blog</a>
                     </div>
                 </div>
-                <div>
+                <div class="footer_item">
                     <h5 class="footer_title">Features</h5>
                     <div class="footer_content">
                         <a href="#">Business Marketing</a>
@@ -309,7 +343,7 @@
                         <a href="#">Unlimited Support</a>
                     </div>
                 </div>
-                <div>
+                <div class="footer_item">
                     <h5 class="footer_title">Resources</h5>
                     <div class="footer_content">
                         <a href="#">IOS & Android</a>
@@ -318,7 +352,7 @@
                         <a href="#">API</a>
                     </div>
                 </div>
-                <div>
+                <div class="footer_item">
                     <h5 class="footer_title">Get in touch</h5>
                     <div class="footer_content gap_5">
                         <div class="footer_contact">
@@ -368,7 +402,7 @@
         
     </div>
     <footer class="footer_copyright">
-        <div class="sub_container display_flex footer_justify_content">
+        <div class="sub_container display_flex footer_justify_content margin_horizontal_15">
             <p class="footer_brand">Brandname. All Right Reserved</p>
             <div class="footer_buttons">
                 <span>
