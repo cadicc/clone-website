@@ -6,7 +6,6 @@ window.addEventListener('scroll', function() {
         header[0].style.position = 'fixed';
         if (header && bannerPos[0]?.offsetHeight) {
             if (window.scrollY >= bannerPos[0]?.offsetHeight) {
-                console.log('dcm');
                 header[0].style.backgroundColor = '#FFG4D6';
                 header[0].style.boxShadow = 'rgba(0, 0, 0, 0.07) 0px 13px 20px 0px;'
             } else {
