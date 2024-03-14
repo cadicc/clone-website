@@ -1,13 +1,21 @@
 window.addEventListener('scroll', function() {
     const header = this.document.getElementsByClassName('sticky_header');
     const bannerPos = this.document.getElementsByClassName('banner_container');
-    if (header && bannerPos[0]?.offsetHeight) {
-        if (window.scrollY >= bannerPos[0]?.offsetHeight) {
-            header[0].style.backgroundColor = '#FFG4D6';
-            header[0].style.boxShadow = 'rgba(0, 0, 0, 0.07) 0px 13px 20px 0px;'
-        } else {
-            header[0].style.backgroundColor = '#FFF2F3';
+    if (window.scrollY > 82) {
+        bannerPos[0].style.paddingTop = '82px';
+        header[0].style.position = 'fixed';
+        if (header && bannerPos[0]?.offsetHeight) {
+            if (window.scrollY >= bannerPos[0]?.offsetHeight) {
+                console.log('dcm');
+                header[0].style.backgroundColor = '#FFG4D6';
+                header[0].style.boxShadow = 'rgba(0, 0, 0, 0.07) 0px 13px 20px 0px;'
+            } else {
+                header[0].style.backgroundColor = '#FFF2F3';
+            }
         }
+    } else if (window.scrollY <= 82) {
+        bannerPos[0].style.paddingTop = null;
+        header[0].style.position = 'sticky';
     }
 });
 
@@ -68,3 +76,8 @@ const handleOpenHeader = () => {
         window.onscroll = function () { };
     }
 }
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+scrollToTop();
